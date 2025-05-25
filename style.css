@@ -1,0 +1,225 @@
+/* Basic Reset & Typography */
+body {
+    font-family: 'Roboto', sans-serif; /* Usando a fonte do Google Fonts */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Dark blue gradient */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero .logo {
+    max-width: 180px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #e0e0e0;
+}
+
+/* Call to Action Button */
+.button {
+    display: inline-block;
+    background-color: #28a745; /* Vibrant Green */
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Sections General */
+.section {
+    padding: 70px 0;
+}
+
+.dark-bg {
+    background-color: #e9ecef; /* Slightly darker background for contrast */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #28a745;
+    border-radius: 2px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Process Steps */
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.step {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%; /* Adjust as needed for 3 columns */
+    position: relative;
+}
+
+.step-number {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.step h3 {
+    color: #34495e;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+#contact a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #34495e;
+    color: #bbb;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #8cbbff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        max-width: 80%; /* Allow steps to take more width on small screens */
+    }
+}
